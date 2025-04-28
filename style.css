@@ -340,43 +340,61 @@ main {
   color: #fff;  /* Garantir que o texto tenha cor branca */
 }
 
+/* Ajustes gerais para telas menores */
 @media (max-width: 768px) {
-  /* Reduz o tamanho da logo */
-  .logo {
-    width: 150px;
-  }
-
-  /* Ajusta a barra lateral */
+  /* Barra lateral */
   .sidebar {
-    width: 80px; /* Diminui a largura da sidebar */
+    width: 70px;  /* Reduz a largura da barra lateral */
+    padding: 10px; /* Ajusta o padding */
   }
 
-  /* Ajuste nos itens da sidebar */
   .nav-header {
-    flex-direction: column; /* Coloca os itens na vertical */
-    gap: 10px;  /* Menos espaço entre os itens */
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .nav-home i {
-    font-size: 30px; /* Reduz o tamanho do ícone da casa */
+  .nav-logo i, .nav-home i {
+    font-size: 30px; /* Reduz o tamanho do ícone */
   }
 
-  .home-text {
-    font-size: 14px; /* Reduz o tamanho do texto */
+  .nav-home .home-text {
+    opacity: 0; /* Torna o texto invisível em telas pequenas */
   }
 
-  /* Ajuste de espaçamentos gerais */
+  .nav-home:hover .home-text {
+    opacity: 1; /* Torna visível ao passar o mouse */
+  }
+
+  /* Alterações no conteúdo principal */
   .container {
     flex-direction: column; /* Organiza tudo em uma coluna */
     height: auto;
   }
 
   .main {
-    padding: 16px; /* Reduz o padding na área principal */
+    padding: 10px; /* Ajusta o padding da área principal */
   }
 
-  /* Ajusta a largura da barra de pesquisa */
+  /* Barra de pesquisa */
   .search-bar {
     width: 100%; /* Faz a barra de pesquisa ocupar toda a largura */
+    margin-top: 20px; /* Dê algum espaço acima da barra */
+  }
+
+  /* Ajusta a fonte do texto */
+  .nav-library p, .nav-playlist h5, .nav-podcast h5 {
+    font-size: 14px;  /* Menor fonte para telas pequenas */
+  }
+
+  .nav-library, .nav-playlist, .nav-podcast {
+    font-size: 14px;  /* Menor tamanho de fonte para melhor adaptação */
+  }
+
+  /* Ajuste de tamanho do botão */
+  .btn-entrar {
+    font-size: 14px;  /* Reduz a fonte do botão */
+    padding: 8px 16px; /* Ajusta o tamanho do padding */
   }
 }

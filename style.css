@@ -339,3 +339,44 @@ main {
   text-transform: capitalize;
   color: #fff;  /* Garantir que o texto tenha cor branca */
 }
+
+@media (max-width: 768px) {
+  /* Reduz o tamanho da logo */
+  .logo {
+    width: 150px;
+  }
+
+  /* Ajusta a barra lateral */
+  .sidebar {
+    width: 80px; /* Diminui a largura da sidebar */
+  }
+
+  /* Ajuste nos itens da sidebar */
+  .nav-header {
+    flex-direction: column; /* Coloca os itens na vertical */
+    gap: 10px;  /* Menos espaço entre os itens */
+  }
+
+  .nav-home i {
+    font-size: 30px; /* Reduz o tamanho do ícone da casa */
+  }
+
+  .home-text {
+    font-size: 14px; /* Reduz o tamanho do texto */
+  }
+
+  /* Ajuste de espaçamentos gerais */
+  .container {
+    flex-direction: column; /* Organiza tudo em uma coluna */
+    height: auto;
+  }
+
+  .main {
+    padding: 16px; /* Reduz o padding na área principal */
+  }
+
+  /* Ajusta a largura da barra de pesquisa */
+  .search-bar {
+    width: 100%; /* Faz a barra de pesquisa ocupar toda a largura */
+  }
+}

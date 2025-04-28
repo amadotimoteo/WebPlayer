@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/5f47d231b3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>WebPlayer</title>
+</head>
+
+<body>
+
+  <!--NavBar-->
+    <navbar id="navbar">
+        <div class="navbar-conteider">
+            <img src="./img/logo.png" alt="" class="logo">
+            <ul class="navbar-items">
+                <li class="navbar-item">Premium</li>
+                <li class="navbar-item">Suporte</li>
+                <li class="navbar-item">Baixar</li>
+                <li class="navbar-item">Inscrever-se</li>
+                <li class="navbar-item">
+                  <button class="btn-entrar">Entrar</button>
+              </li>
+            </ul>
+        </div>
+    </navbar>          
+
+  <div class="container">
+    <nav class="sidebar">
+      <div class="nav-header">
+        <i class="fa-brands fa-spotify"></i>
+    
+        <div class="nav-home">
+          <i class="fa-solid fa-house"></i>
+          <span class="home-text">Início</span>
+        </div>
+      </div>
+    
+      <div class="nav-library">
+        <i class="fa-solid fa-book"></i>
+        <p>Sua Biblioteca</p>
+      </div>
+
+      <div class="nav-playlist">
+        <h5>Crie sua Primeira Playlist</h5>
+        <p>É fácil, vamos te ajudar</p>
+        <button>Criar Playlist</button>
+      </div>
+
+      <div class="nav-podcast">
+        <h5>Que tal ouvir um podcast?</h5>
+        <p>Avisaremos você sobre nossos episódios</p>
+        <button>Explorar Podcasts</button>
+      </div>
+
+      <div class="nav-footer">
+        <a href="#">Legal</a>
+        <a href="#">Centro de Privacidade</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Cookies</a>
+        <a href="#">Sobre anúncios</a>
+        <a href="#">Acessibilidade</a>
+      </div>
+
+      <button class="nav-language-button">
+        <i class="fa-solid fa-globe"></i>
+        Português do Brasil
+      </button>
+    </nav>
+
+    <main>
+
+      <!-- BARRA DE PESQUISA -->
+      <header class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input placeholder="O que você quer ouvir?">
+      </header>
+
+      <section>
+        <h2>Artistas Populares</h2>
+        <div class="artist-grid">
+          <!--Inserir dados com JS-->
+        </div>
+
+        <h2>Álbuns Populares</h2>
+        <div class="albums-grid">
+          <!--Inserir dados com JS-->
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+<script src="./script.js"></script>
+</html>

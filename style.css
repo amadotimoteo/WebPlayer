@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* fundo */
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* NavBar */
+#navbar {
+  display: flex;
+  color: #a7a7a7;
+  justify-content: right;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navbar .navbar-conteider {
+  width: 60%;
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+#navbar .navbar-conteider ul {
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+}
+
+#navbar .navbar-conteider ul li {
+  padding: 0 20px;
+  transition: all 300ms ease;
+}
+
+#navbar .navbar-conteider ul li:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+#navbar .navbar-conteider ul li:nth-child(3) {
+  border-right: 1px solid white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #121212;
+  padding: 15px;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-logo i {
+  font-size: 24px;
+}
+
+.nav-library {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-library i {
+  display: none; /* Remover o ícone do livro */
+}
+
+.nav-library p {
+  font-family: 'Open Sans', sans-serif; 
+  color: #fff; 
+  font-size: 20px; 
+  font-weight: 800; 
+  cursor: pointer; 
+  text-transform: capitalize; 
+}
+
+.nav-playlist, .nav-podcast {
+  background-color: #242424;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.nav-playlist button, .nav-podcast button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.nav-playlist p, .nav-podcast p {
+  font-size: 12px;
+}
+
+.nav-footer {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-footer a {
+  color: #a7a7a7;
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.nav-language-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 12px;
+  margin-top: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+main {
+  padding: 24px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #121212;
+    width: 100%;
+  }
+  
+  .topbar-left,
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .topbar-left {
+    flex: 1; /* Isso garante que a parte da esquerda ocupe o máximo possível de espaço */
+  }
+  
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: flex-end; /* Isso vai alinhar os itens à direita */
+  }
+  
+  .topbar a {
+    color: #a7a7a7;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 16px;
+    background-color: #a7a7a7;
+  }
+  
+  .login-button {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Barra de pesquisa */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 300px;
+  }
+  
+  .search-bar input {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    margin-left: 10px;
+    outline: none;
+    margin-top: auto;
+  }
+  
+
+.artist-grid, .albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.artist-card, .album-card {
+  background-color: #181818;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.artist-card:hover, .album-card:hover {
+  background-color: #282828;
+}
+
+.artist-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%; /* Redondo para artistas */
+  margin-bottom: 16px;
+}
+
+.album-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px; /* Quadrado com cantos arredondados para álbuns */
+  margin-bottom: 16px;
+}
+
+.artist-card h3 {
+  font-family: 'Open Sans', sans-serif; 
+  font-weight: 600; 
+  font-size: 18px;
+  color: #fff; 
+  text-transform: capitalize; 
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.album-card h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/* Botão Entrar */
+.btn-entrar {
+  background: white; 
+  color: black; 
+  border: none; 
+  font-size: 18px; 
+  font-weight: bold; 
+  padding: 8px 20px; 
+  border-radius: 30px; 
+  cursor: pointer; 
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Efeito hover */
+.btn-entrar:hover {
+  transform: scale(1.05); /* Aumenta 5% o tamanho */
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+  gap: 20px;  /* Espaço entre os itens */
+}
+
+.nav-header i {
+  font-size: 40px;  /* Aumentando o tamanho do ícone do Spotify */
+}
+
+.nav-home {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.home-text {
+  position: absolute;
+  align-items: auto;
+  top: 120%; /* posiciona embaixo do ícone */
+  background-color: #333; /* cor do balão */
+  color: #fff; /* cor do texto */
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-home:hover .home-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-home i {
+  font-size: 45px;  /* Aumentando o tamanho do ícone da casa */
+}
+
+.nav-home .home-text {
+  font-size: 20px;  /* Aumentando o tamanho do texto */
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #fff;  /* Garantir que o texto tenha cor branca */
+}
